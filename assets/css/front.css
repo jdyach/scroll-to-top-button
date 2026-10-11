@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Scroll to Top Button — Front-end Styles
+   ========================================================================== */
+
+#stb-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem; /* overridden by inline CSS from PHP settings */
+    z-index: 9999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: var(--stb-bg, #333);
+    color: var(--stb-color, #fff);
+    font-size: 1.25rem;
+    line-height: 1;
+
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#stb-btn[hidden] {
+    display: none;
+}
+
+#stb-btn.stb-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#stb-btn:hover,
+#stb-btn:focus-visible {
+    filter: brightness(1.15);
+    outline: 2px solid var(--stb-bg, #333);
+    outline-offset: 3px;
+}
