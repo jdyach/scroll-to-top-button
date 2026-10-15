@@ -2,6 +2,10 @@
 
 A lightweight WordPress plugin that injects a configurable floating "scroll to top" button on the front end. Zero dependencies — no jQuery, no bloat.
 
+[![Try it live in WordPress Playground](https://img.shields.io/badge/Try%20it%20live-WordPress%20Playground-3858e9?logo=wordpress&logoColor=white&style=for-the-badge)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/jdyach/scroll-to-top-button/main/_playground/blueprint.json)
+
+The live demo runs a real WordPress site in your browser with this plugin, the [Fieldnote](https://github.com/jdyach/fieldnote) block theme and sample content. It opens a long page. Scroll down and the button appears; click it to glide back to the top. Nothing to install.
+
 ## Features
 
 - **Floating button** fixed to the bottom-left or bottom-right corner
