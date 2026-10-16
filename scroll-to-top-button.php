@@ -4,7 +4,7 @@
  * Plugin URI:        https://github.com/jdyach/scroll-to-top-button
  * Description:       Injects a configurable floating "scroll to top" button on the front end. Customize the color, position, and scroll threshold via the Settings page.
  * Version:           1.0.0
- * Author:            Jacqui Dyachenko
+ * Author:            Jacqui Dyach
  * Author URI:        https://jacquid.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
