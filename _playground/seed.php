@@ -117,9 +117,22 @@ function demo_skip_welcome_guide( $extra = array() ) {
 $home = demo_post(
 	array(
 		'post_type'    => 'page',
-		'post_title'   => 'Scroll down',
-		'post_content' => '<!-- wp:paragraph {"fontSize":"large"} --><p class="has-large-font-size">Scroll down this page and a "back to top" button appears in the corner once you pass the threshold. Its color, position and threshold are set under <strong>Settings → Scroll to Top</strong>.</p><!-- /wp:paragraph -->' . demo_article( array( 'Plan the content model', 'Design with real copy', 'Build the templates', 'Write the documentation', 'Launch and hand off', 'Measure what matters' ), 3 ),
+		'post_title'   => 'Scroll to Top Button demo',
+		'post_content' => '<!-- wp:paragraph {"fontSize":"large"} --><p class="has-large-font-size">Scroll down this page: once you are past the first 300 pixels, a round <strong>↑</strong> button appears in the bottom-right corner. Click it to glide back to the top. Its colors, position, label and threshold are set under <strong>Settings → Scroll to Top</strong>.</p><!-- /wp:paragraph -->' . demo_article( array( 'Plan the content model', 'Design with real copy', 'Build the templates', 'Write the documentation', 'Launch and hand off', 'Measure what matters' ), 3 ),
 	)
 );
 update_option( 'show_on_front', 'page' );
 update_option( 'page_on_front', $home );
+
+// Use the Fieldnote theme's accent color so the button stands out on both the
+// light page and the dark footer (the plugin's default is dark gray).
+update_option(
+	STB_OPTIONS_KEY,
+	array(
+		'color'     => '#ffffff',
+		'bg_color'  => '#a8451f',
+		'position'  => 'right',
+		'threshold' => 300,
+		'label'     => '↑',
+	)
+);
